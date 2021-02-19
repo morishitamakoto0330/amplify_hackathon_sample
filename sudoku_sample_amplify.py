@@ -5,8 +5,10 @@ from amplify import Solver, decode_solution, gen_symbols, BinaryPoly, sum_poly, 
 from amplify.client import FixstarsClient
 from amplify.constraint import equal_to, penalty
 
+from secret import get_token
+
 client = FixstarsClient()
-#client.token = "DELETED TOKEN"
+client.token = get_token()
 client.parameters.timeout = 1000
 
 
